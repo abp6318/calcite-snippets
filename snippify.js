@@ -31,7 +31,7 @@ const prompts = require('prompts');
 })();
 
 function processSnippet(snippetName, prefix, description) {
-    const filePath = 'snippet.txt';
+    const filePath = 'snippet.html';
 
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) throw err;
