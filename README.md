@@ -18,6 +18,9 @@ This is an unofficial extension for the Calcite Design System components created
 <!-- Section on how to find extension in VSCode extension store* -->
 The extension has not been published in the VSCode extension store yet.
 
+#### Local Installation
+See notes here: https://github.com/abp6318/calcite-snippets/blob/main/vsc-extension-quickstart.md#install-your-extension
+
 ### Adding New Snippets
 #### Formatting the Snippet
 <!-- Section about formatting name, prefix, description, etc. -->
