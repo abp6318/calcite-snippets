@@ -24,11 +24,13 @@ const prompts = require('prompts');
         }
     ]);
 
-    processSnippet(response);
+    const { snippetName, prefix, description } = response
+    if (snippetName && prefix && description) { 
+        processSnippet(snippetName, prefix, description);
+    }
 })();
 
-function processSnippet(args) {
-    const { snippetName, prefix, description } = args;
+function processSnippet(snippetName, prefix, description) {
     const filePath = 'snippet.txt';
 
     fs.readFile(filePath, 'utf8', (err, data) => {
