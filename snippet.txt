@@ -1,3 +1,4 @@
-<div class="example">
-    Hello World! Format your snippet here before running `npm run snippify`.
-</div>
+<ul class="example">
+    <li>Hello World!</li>
+    <li>Format your snippet here before running `npm run snippify`.</li>
+</ul>
