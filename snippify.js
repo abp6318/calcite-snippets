@@ -46,18 +46,16 @@ function snippify(prefix, description, codeBlock) {
 
     // Convert tabs to "\t" in each line
     const convertedLines = lines.map(
-    line => line
-        .replace(/\t/g, "\t")
-        .replace("    ", "\t")
-        .replace("  ", "\t")
+        line => line
+            .replace(/\t/g, "\t")
+            .replace("    ", "\t")
+            .replace("  ", "\t")
     );
-
-    const jsonArray = JSON.stringify(convertedLines);
 
     const snippet = {
         prefix,
         description,
-        body: jsonArray
+        body: convertedLines
     };
 
     return snippet;
