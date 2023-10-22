@@ -16,5 +16,8 @@
         "path": "./snippets/snippets.code-snippets"
       }
     ]
+  },
+  "dependencies": {
+    "prompts": "^2.4.2"
   }
 }
