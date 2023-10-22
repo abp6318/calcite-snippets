@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "npm",
+        "type": "shell",
+        "command": "npm",
+        "args": ["run"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always"
+        },
+        "problemMatcher": []
+      }
+    ]
+  }
+  
