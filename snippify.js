@@ -47,9 +47,9 @@ function snippify(prefix, description, codeBlock) {
     // Convert tabs to "\t" in each line
     const convertedLines = lines.map(
         line => line
-            .replace(/\t/g, "\t")
-            .replace("    ", "\t")
-            .replace("  ", "\t")
+            .split(/\t/g).join("\t")
+            .split("    ").join("\t")
+            .split("  ").join("\t")
     );
 
     const snippet = {
