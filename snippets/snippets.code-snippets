@@ -16,5 +16,79 @@
       "\t</body>",
       "</html>"
     ]
+  },
+  "Calcite Accordian": {
+    "prefix": "calcite-accordian_example",
+    "description": "Accordions are most often used for hiding and showing sections of related content.",
+    "body": [
+      "<calcite-accordion>",
+      "\t<calcite-accordion-item description=\"Yachts, boats, and dinghies\" heading=\"Watercraft\" icon-start=\"embark\">",
+      "\t\t<calcite-notice open>",
+      "\t\t\t<div slot=\"message\">Recommended for coastal use</div>",
+      "\t\t</calcite-notice>",
+      "\t</calcite-accordion-item>",
+      "\t<calcite-accordion-item icon-start=\"car\" heading=\"Automobiles\" description=\"Cars, trucks, and buses\">",
+      "\t\t<calcite-notice open>",
+      "\t\t\t<div slot=\"message\">A good choice for inland adventure</div>",
+      "\t\t</calcite-notice>",
+      "\t</calcite-accordion-item>",
+      "\t<calcite-accordion-item icon-start=\"plane\" heading=\"Aircrafts\" description=\"Planes, helicopters, and jets\">",
+      "\t\t<calcite-notice open>",
+      "\t\t\t<div slot=\"message\">Cross continents quickly</div>",
+      "\t\t</calcite-notice>",
+      "\t</calcite-accordion-item>",
+      "</calcite-accordion>"
+    ]
+  },
+  "Calcite Action": {
+    "prefix": "calcite-action_example",
+    "description": "Actions are essential building blocks for the interface that perform inline operations.",
+    "body": [
+      "<calcite-action text=\"Basemaps\" icon=\"basemap\" text-enabled></calcite-action>"
+    ]
+  },
+  "Calcite Action Bar": {
+    "prefix": "calcite-action-car_example",
+    "description": "Action Bar is composed of Actions which are typically used for core operations in the interface.",
+    "body": [
+      "<calcite-action-bar>",
+      "\t<calcite-action text=\"Add\" icon=\"plus\"></calcite-action>",
+      "\t<calcite-action text=\"Save\" icon=\"save\"></calcite-action>",
+      "\t<calcite-action text=\"Undo\" icon=\"undo\"></calcite-action>",
+      "\t<calcite-action text=\"Redo\" icon=\"redo\"></calcite-action>",
+      "\t<calcite-tooltip slot=\"expand-tooltip\">Toggle Action Bar</calcite-tooltip>",
+      "</calcite-action-bar>"
+    ]
+  },
+  "Calcite Action Pad": {
+    "prefix": "calcite-action-pad_example",
+    "description": "Action Pad is a floating group of Actions that is typically placed on a map or imagery.",
+    "body": [
+      "<calcite-action-pad>",
+      "\t<calcite-action text=\"Add\" icon=\"plus\"></calcite-action>",
+      "\t<calcite-action text=\"Save\" icon=\"save\"></calcite-action>",
+      "\t<calcite-action text=\"Layers\" icon=\"layers\"></calcite-action>",
+      "\t<calcite-action text=\"Basemaps\" icon=\"layer-basemap\"></calcite-action>",
+      "\t<calcite-tooltip slot=\"expand-tooltip\">Toggle Action Bar</calcite-tooltip>",
+      "</calcite-action-pad>"
+    ]
+  },
+  "Calcite Alert": {
+    "prefix": "calcite-alert_example",
+    "description": "Alerts are contextual pop-up style messages that can contain actions without obstructing the application.",
+    "body": [
+      "<calcite-alert icon=\"rangefinder\" kind=\"brand\" open label=\"A report alert\">",
+      "\t<div slot=\"title\">Trail Camera Report </div>",
+      "\t<div slot=\"message\">We thought you might want to take a look</div>",
+      "\t<calcite-link slot=\"link\">Take action</calcite-link>",
+      "</calcite-alert>"
+    ]
+  },
+  "Calcite Avatar": {
+    "prefix": "calcite-avatar_example",
+    "description": "Avatars are visual representations of users' accounts that can be presented by an image or initials.",
+    "body": [
+      "<calcite-avatar full-name=\"Urbano Monti\"></calcite-avatar>"
+    ]
   }
 }
