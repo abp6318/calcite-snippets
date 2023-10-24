@@ -17,7 +17,7 @@
       "</html>"
     ]
   },
-  "Calcite Accordian": {
+  "Calcite Accordian Example": {
     "prefix": "calcite-accordian_example",
     "description": "Accordions are most often used for hiding and showing sections of related content.",
     "body": [
@@ -40,14 +40,14 @@
       "</calcite-accordion>"
     ]
   },
-  "Calcite Action": {
+  "Calcite Action Example": {
     "prefix": "calcite-action_example",
     "description": "Actions are essential building blocks for the interface that perform inline operations.",
     "body": [
       "<calcite-action text=\"Basemaps\" icon=\"basemap\" text-enabled></calcite-action>"
     ]
   },
-  "Calcite Action Bar": {
+  "Calcite Action Bar Example": {
     "prefix": "calcite-action-car_example",
     "description": "Action Bar is composed of Actions which are typically used for core operations in the interface.",
     "body": [
@@ -60,7 +60,7 @@
       "</calcite-action-bar>"
     ]
   },
-  "Calcite Action Pad": {
+  "Calcite Action Pad Example": {
     "prefix": "calcite-action-pad_example",
     "description": "Action Pad is a floating group of Actions that is typically placed on a map or imagery.",
     "body": [
@@ -73,7 +73,7 @@
       "</calcite-action-pad>"
     ]
   },
-  "Calcite Alert": {
+  "Calcite Alert Example": {
     "prefix": "calcite-alert_example",
     "description": "Alerts are contextual pop-up style messages that can contain actions without obstructing the application.",
     "body": [
@@ -84,11 +84,222 @@
       "</calcite-alert>"
     ]
   },
-  "Calcite Avatar": {
+  "Calcite Avatar Example": {
     "prefix": "calcite-avatar_example",
     "description": "Avatars are visual representations of users' accounts that can be presented by an image or initials.",
     "body": [
       "<calcite-avatar full-name=\"Urbano Monti\"></calcite-avatar>"
+    ]
+  },
+  "Calcite Block Example": {
+    "prefix": "calcite-block_example",
+    "description": "Block provides a way to organize and group related controls or content.",
+    "body": [
+      "<calcite-shell>",
+      "\t<calcite-shell-panel slot=\"panel-start\" width-scale=\"l\">",
+      "\t\t<calcite-panel heading=\"Block example\">",
+      "\t\t\t<calcite-block collapsible open heading=\"Layer effects\" description=\"Adjust blur, highlight, and more\">",
+      "\t\t\t\t<calcite-icon scale=\"s\" slot=\"icon\" icon=\"effects\"></calcite-icon>",
+      "\t\t\t\t<calcite-notice open>",
+      "\t\t\t\t\t<div slot=\"message\">Use layer effects sparingly, for emphasis</div>",
+      "\t\t\t\t</calcite-notice>",
+      "\t\t\t\t<calcite-action slot=\"control\" text=\"Information\" icon=\"information\"></calcite-action>",
+      "\t\t\t\t<div slot=\"header-menu-actions\">",
+      "\t\t\t\t\t<calcite-action text=\"Information\" icon=\"information\" text-enabled></calcite-action>",
+      "\t\t\t\t</div>",
+      "\t\t\t</calcite-block>",
+      "\t\t</calcite-panel>",
+      "\t</calcite-shell-panel>",
+      "\t<calcite-panel heading=\"Content\"></calcite-panel>",
+      "</calcite-shell>"
+    ]
+  },
+  "Calcite Block Section Example": {
+    "prefix": "calcite-block-section_example",
+    "description": "Blocks sections can help organize and group content within a Block.",
+    "body": [
+      "<calcite-shell>",
+      "\t<calcite-shell-panel slot=\"panel-start\" width-scale=\"l\">",
+      "\t\t<calcite-panel heading=\"Block example\">",
+      "\t\t\t<calcite-block collapsible open heading=\"Layer effects\" description=\"Adjust blur, highlight, and more\">",
+      "\t\t\t\t<calcite-icon scale=\"s\" slot=\"icon\" icon=\"effects\"></calcite-icon>",
+      "\t\t\t\t<calcite-notice open>",
+      "\t\t\t\t\t<div slot=\"message\">Use layer effects sparingly, for emphasis</div>",
+      "\t\t\t\t</calcite-notice>",
+      "\t\t\t\t<calcite-action slot=\"control\" text=\"Information\" icon=\"information\"></calcite-action>",
+      "\t\t\t\t<div slot=\"header-menu-actions\">",
+      "\t\t\t\t\t<calcite-action text=\"Information\" icon=\"information\" text-enabled></calcite-action>",
+      "\t\t\t\t</div>",
+      "\t\t\t</calcite-block>",
+      "\t\t</calcite-panel>",
+      "\t</calcite-shell-panel>",
+      "\t<calcite-panel heading=\"Content\"></calcite-panel>",
+      "</calcite-shell>"
+    ]
+  },
+  "Calcite Button Example": {
+    "prefix": "calcite-button_example",
+    "description": "Buttons facilitate actions through an application. Priority and intent can be communicated by using different variants.",
+    "body": [
+      "<calcite-button>Add layer</calcite-button>"
+    ]
+  },
+  "Calcite Action Example (with tooltip)": {
+    "prefix": "calcite-action_example_with-tooltip",
+    "description": "Actions are essential building blocks for the interface that perform inline operations.",
+    "body": [
+      "<div>",
+      "\t<calcite-action id=\"action-with-tooltip\" text=\"Layers\" icon=\"layers\" text-enabled></calcite-action>",
+      "\t<calcite-tooltip reference-element=\"action-with-tooltip\">",
+      "\t\t<span>More information about layers</span>",
+      "\t</calcite-tooltip>",
+      "</div>"
+    ]
+  },
+  "Calcite Action Bar Example (with actions end)": {
+    "prefix": "calcite-action-bar_example_with-actions-end",
+    "description": "Action Bar is composed of Actions which are typically used for core operations in the interface.",
+    "body": [
+      "<calcite-shell>",
+      "\t<calcite-shell-panel width-scale=\"l\" slot=\"panel-end\" position=\"end\" id=\"shell-panel-start\">",
+      "\t\t<calcite-action-bar slot=\"action-bar\">",
+      "\t\t\t<calcite-action-group>",
+      "\t\t\t\t<calcite-action text=\"Add\" icon=\"plus\"></calcite-action>",
+      "\t\t\t\t<calcite-action active text=\"Layers\" indicator icon=\"layers\"></calcite-action>",
+      "\t\t\t</calcite-action-group>",
+      "\t\t\t<calcite-action-group>",
+      "\t\t\t\t<calcite-action text=\"Undo\" icon=\"undo\"></calcite-action>",
+      "\t\t\t\t<calcite-action text=\"Redo\" indicator icon=\"redo\"></calcite-action>",
+      "\t\t\t\t<calcite-action text=\"Save\" disabled icon=\"save\"></calcite-action>",
+      "\t\t\t</calcite-action-group>",
+      "\t\t\t<calcite-action-group slot=\"actions-end\">",
+      "\t\t\t\t<calcite-action text=\"Tips\" icon=\"question\"></calcite-action>",
+      "\t\t\t\t<calcite-action text=\"Settings\" indicator icon=\"gear\"></calcite-action>",
+      "\t\t\t</calcite-action-group>",
+      "\t\t</calcite-action-bar>",
+      "\t\t<calcite-panel heading=\"Layers\" id=\"panel-start\">",
+      "\t\t\t<calcite-block collapsible heading=\"Layer effects\" description=\"Adjust blur, highlight, and more\">",
+      "\t\t\t\t<calcite-icon scale=\"s\" slot=\"icon\" icon=\"effects\"></calcite-icon>",
+      "\t\t\t\t<calcite-label>",
+      "\t\t\t\t\tEffect type",
+      "\t\t\t\t\t<calcite-segmented-control width=\"full\">",
+      "\t\t\t\t\t\t<calcite-segmented-control-item value=\"Blur\"></calcite-segmented-control-item>",
+      "\t\t\t\t\t\t<calcite-segmented-control-item checked value=\"Highlight\"></calcite-segmented-control-item>",
+      "\t\t\t\t\t\t<calcite-segmented-control-item value=\"Party mode\"></calcite-segmented-control-item>",
+      "\t\t\t\t\t</calcite-segmented-control>",
+      "\t\t\t\t</calcite-label>",
+      "\t\t\t\t<calcite-label>",
+      "\t\t\t\t\tEffect intensity",
+      "\t\t\t\t\t<calcite-slider></calcite-slider>",
+      "\t\t\t\t</calcite-label>",
+      "\t\t\t</calcite-block>",
+      "\t\t\t<calcite-block collapsible heading=\"Symbology\" description=\"Select type, color, and transparency\">",
+      "\t\t\t\t<calcite-icon scale=\"s\" slot=\"icon\" icon=\"map-pin\"></calcite-icon>",
+      "\t\t\t\t<calcite-notice open>",
+      "\t\t\t\t\t<div slot=\"message\">The viewers are going to love this</div>",
+      "\t\t\t\t</calcite-notice>",
+      "\t\t\t</calcite-block>",
+      "\t\t</calcite-panel>",
+      "\t</calcite-shell-panel>",
+      "\t<calcite-panel heading=\"Content\"></calcite-panel>",
+      "</calcite-shell>",
+      "<script>",
+      "\tconst panel = document.getElementById(\"panel-start\");",
+      "\tconst shellPanel = document.getElementById(\"shell-panel-start\");",
+      "\tconst actions = shellPanel?.querySelectorAll(\"calcite-action\");",
+      "",
+      "\tactions?.forEach(el => {",
+      "\t\tel.addEventListener(\"click\", function(event) {",
+      "\t\t\tactions?.forEach(action => (action.active = false));",
+      "\t\t\tel.active = panel.closed;",
+      "\t\t\tshellPanel.collapsed = !shellPanel.collapsed;",
+      "\t\t\tpanel.closed = !panel.closed;",
+      "\t\t\tpanel.heading = event.target.text;",
+      "\t\t});",
+      "\t});",
+      "</script>"
+    ]
+  },
+  "Calcite Action Bar Example (with groups)": {
+    "prefix": "calcite-action-bar_example_with-groups",
+    "description": "Action Bar is composed of Actions which are typically used for core operations in the interface.",
+    "body": [
+      "<calcite-shell>",
+      "\t<calcite-shell-panel width-scale=\"l\" slot=\"panel-start\" position=\"start\" id=\"shell-panel-end\">",
+      "\t\t<calcite-action-bar slot=\"action-bar\">",
+      "\t\t\t<calcite-action-group>",
+      "\t\t\t\t<calcite-action text=\"Add\" icon=\"plus\"></calcite-action>",
+      "\t\t\t\t<calcite-action active text=\"Layers\" indicator icon=\"layers\"></calcite-action>",
+      "\t\t\t</calcite-action-group>",
+      "\t\t\t<calcite-action-group>",
+      "\t\t\t\t<calcite-action text=\"Undo\" icon=\"undo\"></calcite-action>",
+      "\t\t\t\t<calcite-action text=\"Redo\" indicator icon=\"redo\"></calcite-action>",
+      "\t\t\t\t<calcite-action text=\"Save\" disabled icon=\"save\"></calcite-action>",
+      "\t\t\t</calcite-action-group>",
+      "\t\t</calcite-action-bar>",
+      "\t\t<calcite-panel heading=\"Layers\" id=\"panel-end\" closable>",
+      "\t\t\t<calcite-block collapsible heading=\"Layer effects\" description=\"Adjust blur, highlight, and more\">",
+      "\t\t\t\t<calcite-icon scale=\"s\" slot=\"icon\" icon=\"effects\"></calcite-icon>",
+      "\t\t\t\t<calcite-label>",
+      "\t\t\t\t\tEffect type",
+      "\t\t\t\t\t<calcite-segmented-control width=\"full\">",
+      "\t\t\t\t\t\t<calcite-segmented-control-item value=\"Blur\"></calcite-segmented-control-item>",
+      "\t\t\t\t\t\t<calcite-segmented-control-item checked value=\"Highlight\"></calcite-segmented-control-item>",
+      "\t\t\t\t\t\t<calcite-segmented-control-item value=\"Party mode\"></calcite-segmented-control-item>",
+      "\t\t\t\t\t</calcite-segmented-control>",
+      "\t\t\t\t</calcite-label>",
+      "\t\t\t\t<calcite-label>",
+      "\t\t\t\t\tEffect intensity",
+      "\t\t\t\t\t<calcite-slider></calcite-slider>",
+      "\t\t\t\t</calcite-label>",
+      "\t\t\t</calcite-block>",
+      "\t\t\t<calcite-block collapsible heading=\"Symbology\" description=\"Select type, color, and transparency\">",
+      "\t\t\t\t<calcite-icon scale=\"s\" slot=\"icon\" icon=\"map-pin\"></calcite-icon>",
+      "\t\t\t\t<calcite-notice open>",
+      "\t\t\t\t\t<div slot=\"message\">The viewers are going to love this</div>",
+      "\t\t\t\t</calcite-notice>",
+      "\t\t\t</calcite-block>",
+      "\t\t</calcite-panel>",
+      "\t</calcite-shell-panel>",
+      "\t<calcite-panel heading=\"Content\"></calcite-panel>",
+      "</calcite-shell>",
+      "<script>",
+      "\tconst panel = document.getElementById(\"panel-end\");",
+      "\tconst shellPanel = document.getElementById(\"shell-panel-end\");",
+      "\tconst actions = shellPanel?.querySelectorAll(\"calcite-action\");",
+      "",
+      "\tpanel?.addEventListener(\"calcitePanelClose\", function(event) {",
+      "\t\tactions?.forEach(action => (action.active = false));",
+      "\t\tshellPanel.collapsed = true;",
+      "\t});",
+      "",
+      "\tactions?.forEach(el => {",
+      "\t\tel.addEventListener(\"click\", function(event) {",
+      "\t\t\tactions?.forEach(action => (action.active = false));",
+      "\t\t\tel.active = panel.closed;",
+      "\t\t\tshellPanel.collapsed = !shellPanel.collapsed;",
+      "\t\t\tpanel.closed = !panel.closed;",
+      "\t\t\tpanel.heading = event.target.text;",
+      "\t\t});",
+      "\t});",
+      "</script>"
+    ]
+  },
+  "Calcite Action Pad Example (with groups)": {
+    "prefix": "calcite-action-pad_example_with-groups",
+    "description": "Action Pad is a floating group of Actions that is typically placed on a map or imagery.",
+    "body": [
+      "<calcite-action-pad>",
+      "\t<calcite-action-group>",
+      "\t\t<calcite-action text=\"Add\" icon=\"plus\"></calcite-action>",
+      "\t\t<calcite-action text=\"Save\" icon=\"save\"></calcite-action>",
+      "\t</calcite-action-group>",
+      "\t<calcite-action-group>",
+      "\t\t<calcite-action text=\"Layers\" icon=\"layers\"></calcite-action>",
+      "\t\t<calcite-action text=\"Basemaps\" icon=\"layer-basemap\"></calcite-action>",
+      "\t</calcite-action-group>",
+      "\t<calcite-tooltip slot=\"expand-tooltip\">Toggle Action Pad</calcite-tooltip>",
+      "</calcite-action-pad>"
     ]
   }
 }
