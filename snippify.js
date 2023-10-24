@@ -69,6 +69,10 @@ function addSnippetToList(snippetName, newSnippet) {
         // read in existing snippets
         let currentSnippets = JSON.parse(data);
 
+        // TODO: Add a check to see if snippet name is already used
+            // if yes, prompt the user if they want to overwrite it
+            // if no, confirm with user it has been created
+
         // add new snippet
         currentSnippets[snippetName] = newSnippet
 
