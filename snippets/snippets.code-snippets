@@ -301,5 +301,137 @@
       "\t<calcite-tooltip slot=\"expand-tooltip\">Toggle Action Pad</calcite-tooltip>",
       "</calcite-action-pad>"
     ]
+  },
+  "Calcite Alert Example (confirmation)": {
+    "prefix": "calcite-alert_example_confirmation",
+    "description": "Alerts are contextual pop-up style messages that can contain actions without obstructing the application.",
+    "body": [
+      "<calcite-alert kind=\"success\" open icon=\"check-layer\" label=\"2010 County Census Report saved\">",
+      "\t<div slot=\"title\">Layer saved</div>",
+      "\t<div slot=\"message\">",
+      "\t\tFeature <b>2010 County Census Report</b> was added to the map",
+      "\t</div>",
+      "</calcite-alert>"
+    ]
+  },
+  "Calcite Alert Example (queuing alerts)": {
+    "prefix": "calcite-alert_example_queuing-alerts",
+    "description": "Alerts are contextual pop-up style messages that can contain actions without obstructing the application.",
+    "body": [
+      "<calcite-alert id=\"original-alert\" kind=\"success\" open icon=\"check-layer\" label=\"2010 County Census Report saved\">",
+      "\t<div slot=\"title\">Layer saved</div>",
+      "\t<div slot=\"message\">",
+      "\t\tFeature <b>2010 County Census Report</b> was added to the map",
+      "\t</div>",
+      "</calcite-alert>",
+      "<calcite-button id=\"example-button\" text=\"Open modal\" icon-start=\"plus\">",
+      "\tAdd alert to queue",
+      "</calcite-button>",
+      "<script>",
+      "\tconst originalAlert = document.getElementById(\"original-alert\");",
+      "\tconst button = document.getElementById(\"example-button\");",
+      "",
+      "\tbutton.addEventListener(\"click\", function() {",
+      "\t\t// create a new alert",
+      "\t\tconst exampleAlert = [",
+      "\t\t\t\"<calcite-alert kind='danger' open>\",",
+      "\t\t\t\"<div slot='title'>Something failed</div>\",",
+      "\t\t\t\"<div slot='message'>That thing you wanted to do didn't work as expected</div>\",",
+      "\t\t\t\"</calcite-alert>\"",
+      "\t\t].join(\"\\n\");",
+      "\t\t// add the created alert",
+      "\t\toriginalAlert.insertAdjacentHTML(\"afterend\", exampleAlert);",
+      "\t});",
+      "</script>"
+    ]
+  },
+  "Calcite Alert Example (with custom icon)": {
+    "prefix": "calcite-alert_example_with-custom-icon",
+    "description": "Alerts are contextual pop-up style messages that can contain actions without obstructing the application.",
+    "body": [
+      "<calcite-alert icon=\"smile\" kind=\"success\" open label=\"Successful action occurred\">",
+      "\t<div slot=\"title\">Everything worked out!</div>",
+      "\t<div slot=\"message\">Take a moment to reflect on your day</div>",
+      "</calcite-alert>"
+    ]
+  },
+  "Calcite Alert Example (with only title)": {
+    "prefix": "calcite-alert_example_with-only-title",
+    "description": "Alerts are contextual pop-up style messages that can contain actions without obstructing the application.",
+    "body": [
+      "<calcite-alert kind=\"danger\" icon open label=\"Danger alert\">",
+      "\t<div slot=\"title\">This isn't going quite as planned</div>",
+      "</calcite-alert>"
+    ]
+  },
+  "Calcite Alert Example (with slotted action)": {
+    "prefix": "calcite-alert_example_with-slotted-action",
+    "description": "Alerts are contextual pop-up style messages that can contain actions without obstructing the application.",
+    "body": [
+      "<calcite-alert open icon=\"sky-plot\" label=\"Migratory bird report status\" scale=\"l\">",
+      "\t<div slot=\"title\">A migratory bird report was received</div>",
+      "\t<div slot=\"message\">Sent from a reporter in Region 4</div>",
+      "\t<calcite-action scale=\"l\" icon=\"follow\" text=\"Track\" text-enabled slot=\"actions-end\"></calcite-action>",
+      "</calcite-alert>"
+    ]
+  },
+  "Calcite Alert Example (with slotted link)": {
+    "prefix": "calcite-alert_example_with-slotted-link",
+    "description": "Alerts are contextual pop-up style messages that can contain actions without obstructing the application.",
+    "body": [
+      "<calcite-alert open label=\"Something interesting alert\">",
+      "\t<div slot=\"title\">Something interesting just happened</div>",
+      "\t<div slot=\"message\">We thought you might want to take a look</div>",
+      "\t<calcite-link slot=\"link\">Take action</calcite-link>",
+      "</calcite-alert>"
+    ]
+  },
+  "Calcite Avatar Example (with thumbnail)": {
+    "prefix": "calcite-avatar_example_with-thumbnail",
+    "description": "Avatars are visual representations of users' accounts that can be presented by an image or initials.",
+    "body": [
+      "<calcite-avatar thumbnail=\"https://placebear.com/40/40\"></calcite-avatar>"
+    ]
+  },
+  "Calcite Block Example (multiple)": {
+    "prefix": "calcite-block_example_multiple",
+    "description": "Block provides a way to organize and group related controls or content.",
+    "body": [
+      "<calcite-shell>",
+      "\t<calcite-shell-panel slot=\"panel-end\" width-scale=\"l\">",
+      "\t\t<calcite-panel heading=\"Block example\">",
+      "\t\t\t<calcite-block collapsible open heading=\"Layer effects\" description=\"Adjust blur, highlight, and more\">",
+      "\t\t\t\t<calcite-icon scale=\"s\" slot=\"icon\" icon=\"effects\"></calcite-icon>",
+      "\t\t\t\t<calcite-label>",
+      "\t\t\t\t\tEffect type",
+      "\t\t\t\t\t<calcite-segmented-control width=\"full\">",
+      "\t\t\t\t\t\t<calcite-segmented-control-item value=\"Blur\"></calcite-segmented-control-item>",
+      "\t\t\t\t\t\t<calcite-segmented-control-item checked value=\"Highlight\"></calcite-segmented-control-item>",
+      "\t\t\t\t\t\t<calcite-segmented-control-item value=\"Party mode\"></calcite-segmented-control-item>",
+      "\t\t\t\t\t</calcite-segmented-control>",
+      "\t\t\t\t</calcite-label>",
+      "\t\t\t\t<calcite-label>",
+      "\t\t\t\t\tEffect intensity",
+      "\t\t\t\t\t<calcite-slider></calcite-slider>",
+      "\t\t\t\t</calcite-label>",
+      "\t\t\t</calcite-block>",
+      "\t\t\t<calcite-block collapsible open heading=\"Symbology\" description=\"Select type, color, and transparency\">",
+      "\t\t\t\t<calcite-icon scale=\"s\" slot=\"icon\" icon=\"map-pin\"></calcite-icon>",
+      "\t\t\t\t<calcite-notice open>",
+      "\t\t\t\t\t<div slot=\"message\">The viewers are going to love this</div>",
+      "\t\t\t\t</calcite-notice>",
+      "\t\t\t</calcite-block>",
+      "\t\t</calcite-panel>",
+      "\t</calcite-shell-panel>",
+      "\t<calcite-panel heading=\"Content\"></calcite-panel>",
+      "</calcite-shell>"
+    ]
+  },
+  "Calcite Button Example (with only icon)": {
+    "prefix": "calcite-button_example_with-only-icon",
+    "description": "Buttons facilitate actions through an application. Priority and intent can be communicated by using different variants.",
+    "body": [
+      "<calcite-button icon-start=\"3d-glasses\"></calcite-button>"
+    ]
   }
 }
