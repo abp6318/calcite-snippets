@@ -69,18 +69,48 @@ function addSnippetToList(snippetName, newSnippet) {
         // read in existing snippets
         let currentSnippets = JSON.parse(data);
 
-        // TODO: Add a check to see if snippet name is already used
-            // if yes, prompt the user if they want to overwrite it
-            // if no, confirm with user it has been created
+        if (currentSnippets[snippetName]) { // snippet name exists already
+            (async () => {
+                const response = await prompts([
+                    {
+                        type: 'text',
+                        name: 'confirmation',
+                        message: 'This snippet name already exists. Are you sure you want to overwrite it? (n/y)',
+                        validate: text => 
+                            text.toLowerCase() === "y" 
+                            || text.toLowerCase() === "n" 
+                            || text.toLowerCase() === "yes" 
+                            || text.toLowerCase() === "no"
+                    }
+                ]);
+            
+                try {
+                    const { confirmation } = response
+                    if (confirmation.toLowerCase() === "y" || confirmation.toLowerCase() === "yes") { 
+                        // add new snippet
+                        currentSnippets[snippetName] = newSnippet
 
-        // add new snippet
-        currentSnippets[snippetName] = newSnippet
+                        const updatedSnippets = JSON.stringify(currentSnippets, null, 2);
 
-        const updatedSnippets = JSON.stringify(currentSnippets, null, 2);
+                        // write to file
+                        fs.writeFile(snippetFile, updatedSnippets, 'utf8', (err) => {
+                            if (err) throw err;
+                        });
+                    }
+                } catch {
+                    console.log("Cancelling snippify...");
+                }
+            })();
+        } else { // snippet doesn't exist already
+            // add new snippet
+            currentSnippets[snippetName] = newSnippet
 
-        // write to file
-        fs.writeFile(snippetFile, updatedSnippets, 'utf8', (err) => {
-            if (err) throw err;
-        });
+            const updatedSnippets = JSON.stringify(currentSnippets, null, 2);
+
+            // write to file
+            fs.writeFile(snippetFile, updatedSnippets, 'utf8', (err) => {
+                if (err) throw err;
+            });
+        }
     });
 }
