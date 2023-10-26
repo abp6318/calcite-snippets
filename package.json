@@ -25,6 +25,6 @@
     "prompts": "^2.4.2"
   },
   "scripts": {
-    "snippify": "node snippify.js"
+    "snippify": "node scripts/snippify/snippify.js"
   }
 }
