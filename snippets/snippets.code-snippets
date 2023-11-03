@@ -433,5 +433,406 @@
     "body": [
       "<calcite-button icon-start=\"3d-glasses\"></calcite-button>"
     ]
+  },
+  "Calcite Floating Action Button (FAB) Example": {
+    "prefix": "calcite-fab_example",
+    "description": "FAB, or Floating Action Button, is a stationary component that floats above other content in an interface.",
+    "body": [
+      "<calcite-fab></calcite-fab>"
+    ]
+  },
+  "Calcite Split Button Example": {
+    "prefix": "calcite-split-button_example",
+    "description": "Split Buttons contain two buttons paired to provide different, but related actions.",
+    "body": [
+      "<calcite-split-button primary-text=\"Add a vegetable\">",
+      "\t<calcite-dropdown-group selection-mode=\"none\" group-title=\"Recently added\">",
+      "\t\t<calcite-dropdown-item>Pea</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Parsnip</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Radish</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Tomato</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Rutabaga</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Bean</calcite-dropdown-item>",
+      "\t</calcite-dropdown-group>",
+      "</calcite-split-button>"
+    ]
+  },
+  "Calcite Card Example": {
+    "prefix": "calcite-card_example",
+    "description": "Cards are rectangular containers that can have images, buttons, and other custom content within.",
+    "body": [
+      "<calcite-card>",
+      "\t<span slot=\"title\">City-owned golf courses</span>",
+      "\t<span slot=\"subtitle\">Department of Recreation - Municipality of Acme</span>",
+      "\t<calcite-chip slot=\"footer-start\" value=\"calcite chip\" kind=\"brand\" icon=\"clock-forward\">",
+      "\t\tRecent",
+      "\t</calcite-chip>",
+      "\t<calcite-chip slot=\"footer-end\" value=\"calcite chip\" icon=\"walking\">",
+      "\t\tRecreation",
+      "\t</calcite-chip>",
+      "</calcite-card>"
+    ]
+  },
+  "Calcite Card Example (with thumbnail and tooltips)": {
+    "prefix": "calcite-card_example_with-thumbnail-and-tooltips",
+    "description": "Cards are rectangular containers that can have images, buttons, and other custom content within.",
+    "body": [
+      "<style>",
+      "\tcalcite-card {",
+      "\t\twidth: 280px;",
+      "\t}",
+      "",
+      "\t#example-slotted-footer {",
+      "\t\tflex-flow: row;",
+      "\t}",
+      "",
+      "\t#example-slotted-action {",
+      "\t\tmargin-inline-start: 0.25rem;",
+      "\t}",
+      "</style>",
+      "<calcite-card>",
+      "\t<img slot=\"thumbnail\" alt=\"Sample image alt\" src=\"https://placebear.com/280/200\">",
+      "\t<span slot=\"title\">Downtown - 4 mile buffer</span>",
+      "\t<span slot=\"subtitle\">City of AcmeCo</span>",
+      "\t<div slot=\"footer-start\" id=\"example-slotted-footer\">",
+      "\t\t<calcite-chip id=\"badge-1\" value=\"calcite chip\" icon=\"check-circle\" scale=\"s\"></calcite-chip>",
+      "\t\t<calcite-chip id=\"badge-2\" value=\"calcite chip\" icon=\"globe\" scale=\"s\"></calcite-chip>",
+      "\t\t<calcite-chip id=\"badge-3\" value=\"calcite chip\" icon=\"security\" scale=\"s\"></calcite-chip>",
+      "\t</div>",
+      "\t<div slot=\"footer-end\">",
+      "\t\t<calcite-chip id=\"badge-4\" value=\"calcite chip\" icon=\"user\" scale=\"s\"></calcite-chip>",
+      "\t\t<calcite-action scale=\"s\" icon=\"ellipsis\" id=\"example-slotted-action\"></calcite-action>",
+      "\t</div>",
+      "</calcite-card>",
+      "<calcite-tooltip reference-element=\"badge-1\">Verified</calcite-tooltip>",
+      "<calcite-tooltip reference-element=\"badge-2\">Public</calcite-tooltip>",
+      "<calcite-tooltip reference-element=\"badge-3\">Secure</calcite-tooltip>",
+      "<calcite-tooltip reference-element=\"badge-4\">User-created</calcite-tooltip>"
+    ]
+  },
+  "Calcite Card Example (wide)": {
+    "prefix": "calcite-card_example_wide",
+    "description": "Cards are rectangular containers that can have images, buttons, and other custom content within.",
+    "body": [
+      "<calcite-card thumbnail-position=\"inline-start\">",
+      "\t<img slot=\"thumbnail\" src=\"https://placebear.com/260/260\" alt=\"A bear in its natural habitat.\">",
+      "\t<span slot=\"title\">Preferred construction locations</span>",
+      "\t<span slot=\"subtitle\">AcmeCo Building Group</span>",
+      "\t<calcite-chip icon=\"effects\">New</calcite-chip>",
+      "\t<calcite-button slot=\"footer-start\" kind=\"neutral\" icon-start=\"duplicate\"></calcite-button>",
+      "\t<div slot=\"footer-end\">",
+      "\t\t<calcite-button kind=\"neutral\" icon-start=\"layer\"></calcite-button>",
+      "\t\t<calcite-button kind=\"neutral\" icon-start=\"attachment\"></calcite-button>",
+      "\t</div>",
+      "</calcite-card>"
+    ]
+  },
+  "Calcite Checkbox Example": {
+    "prefix": "calcite-checkbox_example",
+    "description": "Checkboxes are small, square decision making components used for optional choice or multi-selectable lists.",
+    "body": [
+      "<calcite-label layout=\"inline\">",
+      "\t<calcite-checkbox></calcite-checkbox>",
+      "\tEnable buffer",
+      "</calcite-label>"
+    ]
+  },
+  "Calcite Chip Example": {
+    "prefix": "calcite-chip_example",
+    "description": "Chips are commonly used in filtering and as categorical identifiers. Chips can be contained within a Chip Group to provide keyboard functionality, consistent spacing, and facilitate selection workflows and filtering patterns.",
+    "body": [
+      "<calcite-chip value=\"Alluvial\">",
+      "\tAlluvial",
+      "</calcite-chip>"
+    ]
+  },
+  "Calcite Chip Example (with Avatar)": {
+    "prefix": "calcite-chip_example_with-avatar",
+    "description": "Chips are commonly used in filtering and as categorical identifiers. Chips can be contained within a Chip Group to provide keyboard functionality, consistent spacing, and facilitate selection workflows and filtering patterns.",
+    "body": [
+      "<calcite-chip value=\"Alluvial\" appearance=\"outline-fill\">",
+      "\t<calcite-avatar slot=\"image\" full-name=\"Alluvial\"></calcite-avatar>",
+      "\tAlluvial",
+      "</calcite-chip>"
+    ]
+  },
+  "Calcite Chip Example (with only icon)": {
+    "prefix": "calcite-chip_example_with-only-icon",
+    "description": "Chips are commonly used in filtering and as categorical identifiers. Chips can be contained within a Chip Group to provide keyboard functionality, consistent spacing, and facilitate selection workflows and filtering patterns.",
+    "body": [
+      "<calcite-chip icon=\"3d-glasses\" value=\"Viewing\" kind=\"inverse\"></calcite-chip>"
+    ]
+  },
+  "Calcite Chip Example (with theming)": {
+    "prefix": "calcite-chip_example_with-theming",
+    "description": "Chips are commonly used in filtering and as categorical identifiers. Chips can be contained within a Chip Group to provide keyboard functionality, consistent spacing, and facilitate selection workflows and filtering patterns.",
+    "body": [
+      "<style>",
+      "\t#chip-themed {",
+      "\t\t--calcite-ui-foreground-2: var(--calcite-ui-danger);",
+      "\t\t--calcite-ui-text-1: var(--calcite-ui-foreground-1);",
+      "\t}",
+      "</style>",
+      "<calcite-chip id=\"chip-themed\" icon=\"exclamation-mark-circle\">",
+      "\tDangerous terrain",
+      "</calcite-chip>"
+    ]
+  },
+  "Calcite Chip Example (without image)": {
+    "prefix": "calcite-chip_example_without-image",
+    "description": "Chips are commonly used in filtering and as categorical identifiers. Chips can be contained within a Chip Group to provide keyboard functionality, consistent spacing, and facilitate selection workflows and filtering patterns.",
+    "body": [
+      "<calcite-chip icon=\"3d-glasses\" value=\"Alluvial\">Alluvial</calcite-chip>"
+    ]
+  },
+  "Calcite Chip Group Example": {
+    "prefix": "calcite-chip-group_example",
+    "description": "Chip Group provides consistent spacing, accessible keyboard navigation, and selection modes to multiple Chips.",
+    "body": [
+      "<calcite-chip-group label=\"demo-group-label\">",
+      "\t<calcite-chip value=\"Biome A\">Biome A</calcite-chip>",
+      "\t<calcite-chip value=\"Biome B\">Biome B</calcite-chip>",
+      "\t<calcite-chip value=\"Biome C\">Biome C</calcite-chip>",
+      "\t<calcite-chip value=\"Biome D\">Biome D</calcite-chip>",
+      "\t<calcite-chip value=\"Biome E\">Biome E</calcite-chip>",
+      "</calcite-chip-group>"
+    ]
+  },
+  "Calcite Chip Group Example (selection and closable)": {
+    "prefix": "calcite-chip-group_example_selection-and-closable",
+    "description": "Chip Group provides consistent spacing, accessible keyboard navigation, and selection modes to multiple Chips.",
+    "body": [
+      "<calcite-chip-group label=\"demo-group-label\" selection-mode=\"single-persist\">",
+      "\t<calcite-chip icon=\"file-csv\" closable value=\"CSV\">",
+      "\t\tCSV",
+      "\t</calcite-chip>",
+      "\t<calcite-chip icon=\"file-excel\" closable value=\"Excel\">",
+      "\t\tExcel",
+      "\t</calcite-chip>",
+      "\t<calcite-chip selected icon=\"file-kml\" closable value=\"KML\">",
+      "\t\tKML",
+      "\t</calcite-chip>",
+      "\t<calcite-chip icon=\"file-text\" closable value=\"Text\">",
+      "\t\tText",
+      "\t</calcite-chip>",
+      "\t<calcite-chip icon=\"file-pdf\" closable value=\"PDF\">",
+      "\t\tPDF",
+      "\t</calcite-chip>",
+      "</calcite-chip-group>"
+    ]
+  },
+  "Calcite Chip Group Example (with theming)": {
+    "prefix": "calcite-chip-group_example_with-theming",
+    "description": "Chip Group provides consistent spacing, accessible keyboard navigation, and selection modes to multiple Chips.",
+    "body": [
+      "<style>",
+      "\tcalcite-chip:first-of-type {",
+      "\t\t--calcite-ui-brand: teal;",
+      "\t\t--calcite-ui-text-1: teal;",
+      "\t}",
+      "",
+      "\tcalcite-chip:nth-of-type(2) {",
+      "\t\t--calcite-ui-brand: darkgreen;",
+      "\t\t--calcite-ui-text-1: darkgreen;",
+      "\t}",
+      "",
+      "\tcalcite-chip:nth-of-type(3) {",
+      "\t\t--calcite-ui-brand: darkred;",
+      "\t\t--calcite-ui-text-1: darkred;",
+      "\t}",
+      "",
+      "\tcalcite-chip:nth-of-type(4) {",
+      "\t\t--calcite-ui-brand: darkorange;",
+      "\t\t--calcite-ui-text-1: darkorange;",
+      "\t}",
+      "",
+      "\tcalcite-chip:nth-of-type(5) {",
+      "\t\t--calcite-ui-brand: purple;",
+      "\t\t--calcite-ui-text-1: purple;",
+      "\t}",
+      "</style>",
+      "<calcite-chip-group label=\"demo-group-label\" selection-mode=\"multiple\">",
+      "\t<calcite-chip value=\"Tundra\">Tundra</calcite-chip>",
+      "\t<calcite-chip selected value=\"Estuary\">",
+      "\t\tEstuary",
+      "\t</calcite-chip>",
+      "\t<calcite-chip value=\"Taiga\">Taiga</calcite-chip>",
+      "\t<calcite-chip value=\"Savanna\">Savanna</calcite-chip>",
+      "\t<calcite-chip value=\"Desert\">Desert</calcite-chip>",
+      "</calcite-chip-group>",
+      ""
+    ]
+  },
+  "Calcite Chip Group Example (with theming selected)": {
+    "prefix": "calcite-chip-group_example_with-theming-selected",
+    "description": "Chip Group provides consistent spacing, accessible keyboard navigation, and selection modes to multiple Chips.",
+    "body": [
+      "<style>",
+      "\tcalcite-chip[selected] {",
+      "\t\t--calcite-ui-foreground-2: var(--calcite-ui-brand);",
+      "\t\t--calcite-ui-text-1: var(--calcite-ui-text-inverse);",
+      "\t}",
+      "</style>",
+      "<calcite-chip-group label=\"demo-group-label\" selection-mode=\"single-persist\">",
+      "\t<calcite-chip value=\"Tundra\">Tundra</calcite-chip>",
+      "\t<calcite-chip selected value=\"Estuary\">Estuary</calcite-chip>",
+      "\t<calcite-chip value=\"Taiga\">Taiga</calcite-chip>",
+      "\t<calcite-chip value=\"Savanna\">Savanna</calcite-chip>",
+      "\t<calcite-chip value=\"Desert\">Desert</calcite-chip>",
+      "</calcite-chip-group>"
+    ]
+  },
+  "Calcite Chip Group Example (with theming selected advanced)": {
+    "prefix": "calcite-chip-group_example_with-theming-selected-advanced",
+    "description": "Chip Group provides consistent spacing, accessible keyboard navigation, and selection modes to multiple Chips.",
+    "body": [
+      "<style>",
+      "\tcalcite-chip:first-of-type {",
+      "\t\t--calcite-ui-focus-color: #c66a4a;",
+      "\t\t--calcite-ui-icon-color: #c66a4a;",
+      "\t}",
+      "",
+      "\tcalcite-chip:first-of-type[selected] {",
+      "\t\t--calcite-ui-foreground-2: rgba(198, 106, 74, 0.25);",
+      "\t}",
+      "",
+      "\tcalcite-chip:nth-child(2) {",
+      "\t\t--calcite-ui-focus-color: #3cccb4;",
+      "\t\t--calcite-ui-icon-color: #3cccb4;",
+      "\t}",
+      "",
+      "\tcalcite-chip:nth-child(2)[selected] {",
+      "\t\t--calcite-ui-foreground-2: rgba(60, 204, 180, 0.25);",
+      "\t}",
+      "",
+      "\tcalcite-chip:nth-child(3) {",
+      "\t\t--calcite-ui-focus-color: #7a81ff;",
+      "\t\t--calcite-ui-icon-color: #7a81ff;",
+      "\t}",
+      "",
+      "\tcalcite-chip:nth-child(3)[selected] {",
+      "\t\t--calcite-ui-foreground-2: rgba(122, 129, 255, 0.25);",
+      "\t}",
+      "",
+      "\tcalcite-chip:nth-child(4) {",
+      "\t\t--calcite-ui-focus-color: #0096ff;",
+      "\t\t--calcite-ui-icon-color: #0096ff;",
+      "\t}",
+      "",
+      "\tcalcite-chip:nth-child(4)[selected] {",
+      "\t\t--calcite-ui-foreground-2: rgba(0, 150, 255, 0.25);",
+      "\t}",
+      "",
+      "\tcalcite-chip:nth-child(5) {",
+      "\t\t--calcite-ui-focus-color: #f260a1;",
+      "\t\t--calcite-ui-icon-color: #f260a1;",
+      "\t}",
+      "",
+      "\tcalcite-chip:nth-child(5)[selected] {",
+      "\t\t--calcite-ui-foreground-2: rgba(242, 95, 161, 0.25);",
+      "\t}",
+      "</style>",
+      "<calcite-chip-group label=\"demo-group-label\" selection-mode=\"multiple\">",
+      "\t<calcite-chip icon=\"plane\" value=\"Plane\">",
+      "\t\tPlane",
+      "\t</calcite-chip>",
+      "\t<calcite-chip icon=\"car\" value=\"Car\">",
+      "\t\tCar",
+      "\t</calcite-chip>",
+      "\t<calcite-chip icon=\"embark\" value=\"Ship\">",
+      "\t\tShip",
+      "\t</calcite-chip>",
+      "\t<calcite-chip icon=\"biking\" selected value=\"Bike\">",
+      "\t\tBike",
+      "\t</calcite-chip>",
+      "\t<calcite-chip icon=\"walking\" value=\"Walking\">",
+      "\t\tWalking",
+      "\t</calcite-chip>",
+      "</calcite-chip-group>"
+    ]
+  },
+  "Calcite Combobox Example": {
+    "prefix": "calcite-combobox_example",
+    "description": "Combobox is an input and dropdown-based selection, which allows for quick filtering of single and multi-selections.",
+    "body": [
+      "<calcite-combobox placeholder=\"Select a field\">",
+      "\t<calcite-combobox-item value=\"Natural Resources\" text-label=\"Natural Resources\"></calcite-combobox-item>",
+      "\t<calcite-combobox-item value=\"Agriculture\" text-label=\"Agriculture\"></calcite-combobox-item>",
+      "\t<calcite-combobox-item value=\"Forestry\" text-label=\"Forestry\"></calcite-combobox-item>",
+      "\t<calcite-combobox-item value=\"Mining\" text-label=\"Mining\"></calcite-combobox-item>",
+      "\t<calcite-combobox-item value=\"Business\" text-label=\"Business\"></calcite-combobox-item>",
+      "\t<calcite-combobox-item value=\"Education\" text-label=\"Education\"></calcite-combobox-item>",
+      "\t<calcite-combobox-item value=\"Utilities\" text-label=\"Utilities\"></calcite-combobox-item>",
+      "\t<calcite-combobox-item value=\"Transportation\" text-label=\"Transportation\"></calcite-combobox-item>",
+      "</calcite-combobox>"
+    ]
+  },
+  "Calcite Combobox Example (with groups)": {
+    "prefix": "calcite-combobox_example_with-groups",
+    "description": "Combobox is an input and dropdown-based selection, which allows for quick filtering of single and multi-selections.",
+    "body": [
+      "<calcite-combobox placeholder=\"Select interests\">",
+      "\t<calcite-combobox-item-group label=\"Sports\">",
+      "\t\t<calcite-combobox-item value=\"Soccer\" text-label=\"Soccer\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Football\" text-label=\"Football\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Disc Golf\" text-label=\"Disc Golf\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Tennis\" text-label=\"Tennis\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Pond Hockey\" text-label=\"Pond Hockey\"></calcite-combobox-item>",
+      "\t</calcite-combobox-item-group>",
+      "\t<calcite-combobox-item-group label=\"Recreation\">",
+      "\t\t<calcite-combobox-item value=\"Fishing\" text-label=\"Fishing\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Snowmobiling\" text-label=\"Snowmobiling\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Metal Detecting\" text-label=\"Metal Detecting\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Bird Watching\" text-label=\"Bird Watching\"></calcite-combobox-item>",
+      "\t</calcite-combobox-item-group>",
+      "</calcite-combobox>"
+    ]
+  },
+  "Calcite Combobox Example (with Label)": {
+    "prefix": "calcite-combobox_example_with-label",
+    "description": "Combobox is an input and dropdown-based selection, which allows for quick filtering of single and multi-selections.",
+    "body": [
+      "<calcite-label>",
+      "\tFile type",
+      "\t<calcite-combobox placeholder-icon=\"file\" placeholder=\"File types\" selection-mode=\"single\">",
+      "\t\t<calcite-combobox-item icon=\"file-cad\" value=\"CAD\" text-label=\"CAD\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item icon=\"file-csv\" value=\"CSV\" text-label=\"CSV\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item icon=\"file-ecd\" value=\"ECD\" text-label=\"ECD\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item icon=\"file-gpx\" value=\"GPX\" text-label=\"GPX\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item icon=\"file-kml\" value=\"KML\" text-label=\"KML\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item selected icon=\"file-pdf\" value=\"PDF\" text-label=\"PDF\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item icon=\"file-ppt\" value=\"PPT\" text-label=\"PPT\"></calcite-combobox-item>",
+      "\t</calcite-combobox>",
+      "</calcite-label>"
+    ]
+  },
+  "Calcite Combobox Example (with nesting)": {
+    "prefix": "calcite-combobox_example_with-nesting",
+    "description": "Combobox is an input and dropdown-based selection, which allows for quick filtering of single and multi-selections.",
+    "body": [
+      "<calcite-combobox placeholder=\"Select interests\">",
+      "\t<calcite-combobox-item value=\"Engineering\" text-label=\"Engineering\">",
+      "\t\t<calcite-combobox-item value=\"Architecture\" text-label=\"Architecture\">",
+      "\t\t\t<calcite-combobox-item value=\"Nested item\" text-label=\"Nested item\"></calcite-combobox-item>",
+      "\t\t</calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Disabled item\" disabled text-label=\"Disabled item\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Construction\" text-label=\"Construction\"></calcite-combobox-item>",
+      "\t</calcite-combobox-item>",
+      "\t<calcite-combobox-item value=\"Public Safety\" text-label=\"Public Safety\">",
+      "\t\t<calcite-combobox-item value=\"Fire, Rescure, and EMS\" text-label=\"Fire, Rescure, and EMS\">",
+      "\t\t</calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Homeland Security\" text-label=\"Homeland Security\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Law Enforcement\" text-label=\"Law Enforcement\"></calcite-combobox-item>",
+      "\t</calcite-combobox-item>",
+      "\t<calcite-combobox-item value=\"Natural Resources\" text-label=\"Natural Resources\">",
+      "\t\t<calcite-combobox-item value=\"Agriculture\" text-label=\"Agriculture\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Forestry\" text-label=\"Forestry\"></calcite-combobox-item>",
+      "\t\t<calcite-combobox-item value=\"Mining\" text-label=\"Mining\"></calcite-combobox-item>",
+      "\t</calcite-combobox-item>",
+      "\t<calcite-combobox-item value=\"Business\" text-label=\"Business\"></calcite-combobox-item>",
+      "\t<calcite-combobox-item value=\"Education\" text-label=\"Education\"></calcite-combobox-item>",
+      "\t<calcite-combobox-item value=\"Utilities\" text-label=\"Utilities\"></calcite-combobox-item>",
+      "</calcite-combobox>"
+    ]
   }
 }
