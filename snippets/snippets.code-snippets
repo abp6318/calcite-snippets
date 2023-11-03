@@ -834,5 +834,262 @@
       "\t<calcite-combobox-item value=\"Utilities\" text-label=\"Utilities\"></calcite-combobox-item>",
       "</calcite-combobox>"
     ]
+  },
+  "Calcite Dropdown Example": {
+    "prefix": "calcite-dropdown_example",
+    "description": "Dropdowns are floating lists that can be revealed by an event such as a button click or select tag.",
+    "body": [
+      "<calcite-dropdown width=\"m\">",
+      "\t<calcite-button slot=\"trigger\">Select landform</calcite-button>",
+      "\t<calcite-dropdown-group group-title=\"Natural places\">",
+      "\t\t<calcite-dropdown-item>Mountain</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>River</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Waterfall</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Rainforest</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Tundra</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Desert</calcite-dropdown-item>",
+      "\t</calcite-dropdown-group>",
+      "</calcite-dropdown>"
+    ]
+  },
+  "Calcite Dropdown Example (with groups)": {
+    "prefix": "calcite-dropdown_example_with-groups",
+    "description": "Dropdowns are floating lists that can be revealed by an event such as a button click or select tag.",
+    "body": [
+      "<calcite-dropdown width=\"m\" close-on-select-disabled>",
+      "\t<calcite-button slot=\"trigger\" scale=\"l\" kind=\"inverse\" appearance=\"outline-fill\" icon-start=\"classify-pixels\">",
+      "\t\tGarden preferences",
+      "\t</calcite-button>",
+      "\t<calcite-dropdown-group selection-mode=\"single\" group-title=\"Select a fruit\">",
+      "\t\t<calcite-dropdown-item selected>Orange</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Apple</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Pomegranate</calcite-dropdown-item>",
+      "\t</calcite-dropdown-group>",
+      "\t<calcite-dropdown-group selection-mode=\"multiple\" group-title=\"Choose vegetables\">",
+      "\t\t<calcite-dropdown-item selected>Rutabaga</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Parsnip</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Pea</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item selected>Pepper</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>Broccoli</calcite-dropdown-item>",
+      "\t</calcite-dropdown-group>",
+      "\t<calcite-dropdown-group selection-mode=\"none\" group-title=\"Plant something\">",
+      "\t\t<calcite-dropdown-item>New fruit</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item>New vegetable</calcite-dropdown-item>",
+      "\t</calcite-dropdown-group>",
+      "</calcite-dropdown>"
+    ]
+  },
+  "Calcite Dropdown Example (with icons)": {
+    "prefix": "calcite-dropdown_example_with-icons",
+    "description": "Dropdowns are floating lists that can be revealed by an event such as a button click or select tag.",
+    "body": [
+      "<calcite-dropdown width=\"m\" scale=\"l\">",
+      "\t<calcite-fab slot=\"trigger\" scale=\"l\" icon=\"chart-gear\" appearance=\"outline-fill\">",
+      "\t\tChart and graph types",
+      "\t</calcite-fab>",
+      "\t<calcite-dropdown-group group-title=\"Chart and graph types\">",
+      "\t\t<calcite-dropdown-item icon-start=\"graph-bar\">Box chart</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item icon-start=\"heat-chart\">Heat chart</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item icon-start=\"graph-histogram\" selected>",
+      "\t\t\tHistogram",
+      "\t\t</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item icon-start=\"pie-chart\">Pie chart</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item icon-start=\"graph-scatter-plot\">Scatter plot</calcite-dropdown-item>",
+      "\t\t<calcite-dropdown-item icon-start=\"sky-plot\">Sky plot</calcite-dropdown-item>",
+      "\t</calcite-dropdown-group>",
+      "</calcite-dropdown>"
+    ]
+  },
+  "Calcite Flow Example": {
+    "prefix": "calcite-flow_exampple",
+    "description": "Flow is a layout component which allows for drilling in and out of panels in the interface.",
+    "body": [
+      "<style>",
+      "\t#first-flow-item-block {",
+      "\t\t--calcite-block-padding: 0px;",
+      "\t}",
+      "</style>",
+      "<calcite-shell>",
+      "\t<calcite-shell-panel slot=\"panel-start\" width-scale=\"l\">",
+      "\t\t<calcite-flow id=\"example-flow\">",
+      "\t\t\t<calcite-flow-item heading=\"Places of Education\">",
+      "\t\t\t\t<calcite-block id=\"first-flow-item-block\" heading=\"Recommended for you\" description=\"4 results\"",
+      "\t\t\t\t\topen>",
+      "\t\t\t\t\t<calcite-list>",
+      "\t\t\t\t\t\t<calcite-list-item label=\"Narnia Community College\" description=\"Wardobe, IA\">",
+      "\t\t\t\t\t\t</calcite-list-item>",
+      "\t\t\t\t\t\t<calcite-list-item label=\"University of Acme\" description=\"Acmeton, CA\"></calcite-list-item>",
+      "\t\t\t\t\t\t<calcite-list-item label=\"Roadrunner Trade School\" description=\"Zion, UT\">",
+      "\t\t\t\t\t\t</calcite-list-item>",
+      "\t\t\t\t\t\t<calcite-list-item label=\"Cartographic Institute\" description=\"Redlands, CA\">",
+      "\t\t\t\t\t\t</calcite-list-item>",
+      "\t\t\t\t\t</calcite-list>",
+      "\t\t\t\t</calcite-block>",
+      "\t\t\t</calcite-flow-item>",
+      "\t\t</calcite-flow>",
+      "\t</calcite-shell-panel>",
+      "\t<calcite-panel heading=\"Content\"></calcite-panel>",
+      "</calcite-shell>",
+      "<script>",
+      "\tconst flow = document.getElementById(\"example-flow\");",
+      "\tconst items = document.querySelectorAll(\"calcite-list-item\");",
+      "",
+      "\titems?.forEach(item => {",
+      "\t\titem.addEventListener(\"calciteListItemSelect\", event => {",
+      "\t\t\tcreateFlowItem(event, event.target.label, event.target.description, false);",
+      "\t\t});",
+      "\t});",
+      "",
+      "\tfunction createFlowItem(event, title, description, isLastLevel) {",
+      "\t\tconst newFlowItem = document.createElement(\"calcite-flow-item\");",
+      "\t\tnewFlowItem.heading = !isLastLevel ? title : \"Even more details\";",
+      "\t\tnewFlowItem.description = !isLastLevel ? description : title;",
+      "",
+      "\t\tconst block = document.createElement(\"calcite-block\");",
+      "\t\tblock.open = true;",
+      "\t\tblock.heading = \"Details\";",
+      "\t\tnewFlowItem.append(block);",
+      "",
+      "\t\tconst notice = document.createElement(\"calcite-notice\");",
+      "\t\tnotice.open = true;",
+      "\t\tnotice.width = \"full\";",
+      "\t\tblock.append(notice);",
+      "",
+      "\t\tconst noticeMessage = document.createElement(\"span\");",
+      "\t\tnoticeMessage.slot = \"message\";",
+      "\t\tnoticeMessage.innerText = !isLastLevel ? `A new Flow Item for ${title}.` :",
+      "\t\t\"You've reached the end of the line.\";",
+      "\t\tnotice.append(noticeMessage);",
+      "",
+      "\t\tif (!isLastLevel) {",
+      "\t\t\tconst button = document.createElement(\"calcite-button\");",
+      "\t\t\tbutton.slot = \"footer\";",
+      "\t\t\tbutton.width = \"full\";",
+      "\t\t\tbutton.innerText = \"Move to a third Flow Item\";",
+      "\t\t\tbutton.addEventListener(\"click\", event => createFlowItem(event, title, description, true));",
+      "\t\t\tif (!isLastLevel) newFlowItem.append(button);",
+      "\t\t}",
+      "",
+      "\t\tflow.append(newFlowItem);",
+      "\t}",
+      "</script>"
+    ]
+  },
+  "Calcite Flow Item Example": {
+    "prefix": "calcite-flow-item_example",
+    "description": "Child component of Flow",
+    "body": [
+      "<calcite-shell>",
+      "\t<calcite-shell-panel slot=\"panel-start\" width-scale=\"l\">",
+      "\t\t<calcite-flow>",
+      "\t\t\t<calcite-flow-item>",
+      "\t\t\t\t<calcite-panel heading=\"Map Options\">",
+      "\t\t\t\t\t<calcite-action icon=\"question\" text=\"Favorite\" slot=\"header-actions-start\"></calcite-action>",
+      "\t\t\t\t\t<calcite-action icon=\"save\" text=\"Save\" slot=\"header-actions-end\"></calcite-action>",
+      "\t\t\t\t\t<calcite-action icon=\"reset\" text-enabled text=\"Reset\" slot=\"header-menu-actions\"></calcite-action>",
+      "\t\t\t\t\t<calcite-action icon=\"pencil\" text-enabled text=\"Rename\" slot=\"header-menu-actions\">",
+      "\t\t\t\t\t</calcite-action>",
+      "\t\t\t\t\t<calcite-button width=\"half\" slot=\"footer\" appearance=\"outline\">",
+      "\t\t\t\t\t\tCancel",
+      "\t\t\t\t\t</calcite-button>",
+      "\t\t\t\t\t<calcite-button width=\"half\" slot=\"footer\">",
+      "\t\t\t\t\t\tNext",
+      "\t\t\t\t\t</calcite-button>",
+      "\t\t\t\t\t<calcite-block collapsible heading=\"Layer effects\" description=\"Adjust blur, highlight, and more\">",
+      "\t\t\t\t\t\t<calcite-icon scale=\"s\" slot=\"icon\" icon=\"effects\"></calcite-icon>",
+      "\t\t\t\t\t\t<calcite-notice open>",
+      "\t\t\t\t\t\t\t<div slot=\"message\">Use layer effects sparingly, for emphasis</div>",
+      "\t\t\t\t\t\t</calcite-notice>",
+      "\t\t\t\t\t</calcite-block>",
+      "\t\t\t\t\t<calcite-block collapsible heading=\"Symbology\" description=\"Select type, color, and transparency\">",
+      "\t\t\t\t\t\t<calcite-icon scale=\"s\" slot=\"icon\" icon=\"map-pin\"></calcite-icon>",
+      "\t\t\t\t\t\t<calcite-notice open>",
+      "\t\t\t\t\t\t\t<div slot=\"message\">The viewers are going to love this</div>",
+      "\t\t\t\t\t\t</calcite-notice>",
+      "\t\t\t\t\t</calcite-block>",
+      "\t\t\t\t\t<calcite-fab slot=\"fab\"></calcite-fab>",
+      "\t\t\t\t</calcite-panel>",
+      "\t\t\t</calcite-flow-item>",
+      "\t\t</calcite-flow>",
+      "\t</calcite-shell-panel>",
+      "\t<calcite-panel heading=\"Content\"></calcite-panel>",
+      "</calcite-shell>"
+    ]
+  },
+  "Calcite Icon Example": {
+    "prefix": "calcite-icon_example",
+    "description": "The Icon component is a handy tool for controlling size, and flipping right-to-left for international use. Icons are utilized from Calcite's UI Icon library that contains hundreds of unique concepts.",
+    "body": [
+      "<calcite-icon icon=\"360-view\" text-label=\"360 degree view\"></calcite-icon>"
+    ]
+  },
+  "Calcite Inline Editable Example": {
+    "prefix": "calcite-inline-editable_example",
+    "description": "Inline Editable is an input-based component which when focused, the text can be saved or discarded.",
+    "body": [
+      "<calcite-inline-editable>",
+      "\t<calcite-input value=\"Business District Tree Survey\" placeholder=\"Business District Tree Survey\"></calcite-input>",
+      "</calcite-inline-editable>"
+    ]
+  },
+  "Calcite Input Example": {
+    "prefix": "calcite-input_example",
+    "description": "Inputs are text containers which can be used to create forms, enter data, and enact various commands.",
+    "body": [
+      "<calcite-input placeholder=\"Enter your region\"></calcite-input>"
+    ]
+  },
+  "Calcite Input Example (with Input message)": {
+    "prefix": "calcite-input_example_with-input-message",
+    "description": "Inputs are text containers which can be used to create forms, enter data, and enact various commands.",
+    "body": [
+      "<calcite-label>",
+      "\tDesired subdomain",
+      "\t<calcite-input suffix-text=\".city-of-acme.gov\" status=\"invalid\" placeholder=\"Enter your subdomain\"",
+      "\t\tvalue=\"i-love-maps\"></calcite-input>",
+      "\t<calcite-input-message icon=\"frown\" status=\"invalid\">",
+      "\t\tApologies, this subdomain has already been registered.",
+      "\t</calcite-input-message>",
+      "</calcite-label>"
+    ]
+  },
+  "Calcite Input Example (with Label)": {
+    "prefix": "calcite-input_example_with-label",
+    "description": "Inputs are text containers which can be used to create forms, enter data, and enact various commands.",
+    "body": [
+      "<calcite-label>",
+      "\tClimate region",
+      "\t<calcite-input placeholder=\"Enter your region\"></calcite-input>",
+      "</calcite-label>"
+    ]
+  },
+  "Calcite Input Example (with read-only)": {
+    "prefix": "calcite-input_example_with-read-only",
+    "description": "Inputs are text containers which can be used to create forms, enter data, and enact various commands.",
+    "body": [
+      "<calcite-label layout=\"inline-space-between\">",
+      "\tYour API Key",
+      "\t<calcite-input value=\"jtfh54kj7v00op42\" read-only>",
+      "\t\t<div slot=\"action\">",
+      "\t\t\t<calcite-button id=\"sample-button\" icon-start=\"copy-to-clipboard\"></calcite-button>",
+      "\t\t</div>",
+      "\t</calcite-input>",
+      "\t<calcite-tooltip reference-element=\"sample-button\">Copy API Key</calcite-tooltip>",
+      "</calcite-label>"
+    ]
+  },
+  "Calcite Input Example (with slotted content)": {
+    "prefix": "calcite-input_example_with-slotted-content",
+    "description": "Inputs are text containers which can be used to create forms, enter data, and enact various commands.",
+    "body": [
+      "<calcite-label scale=\"l\">",
+      "\tGuess the name of the animal",
+      "\t<calcite-input placeholder=\"Enter your guess\" scale=\"l\">",
+      "\t\t<calcite-button icon-start=\"arrow-right\" slot=\"action\" scale=\"l\">",
+      "\t\t\tFingers crossed!",
+      "\t\t</calcite-button>",
+      "\t</calcite-input>",
+      "</calcite-label>"
+    ]
   }
 }
